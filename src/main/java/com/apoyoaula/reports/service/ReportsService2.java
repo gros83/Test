@@ -6,7 +6,6 @@ import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.apoyoaula.reports.impl.JasperImpl;
 import com.apoyoaula.reports.impl.JasperImpl2;
 
 public class ReportsService2 {
