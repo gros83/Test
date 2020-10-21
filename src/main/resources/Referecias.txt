@@ -19,3 +19,6 @@ admin
 
 https://ayuda.guebs.com/usar-psql-conectar-base-datos-postgresql/
 https://www.neoguias.com/como-conectarse-postgresql-desde-linea-comandos/
+
+Dockers
+https://www.javatpoint.com/docker-java-example

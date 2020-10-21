@@ -17,6 +17,7 @@ import com.apoyoaula.reports.repository.ConexionesBaseDatos;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.export.JRPdfExporter;
+import net.sf.jasperreports.engine.export.JRXlsExporter;
 import net.sf.jasperreports.engine.query.JRXPathQueryExecuterFactory;
 import net.sf.jasperreports.export.Exporter;
 import net.sf.jasperreports.export.SimpleExporterInput;
@@ -25,6 +26,11 @@ import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 public class JasperImpl2{
 	public void toPdf(File template, OutputStream out, Map<String, Object> parameters) throws Exception {
 		execute(template, out, new JRPdfExporter(), parameters);
+
+	}
+	
+	public void toXls(File template, OutputStream out, Map<String, Object> parameters) throws Exception {
+		execute(template, out, new JRXlsExporter(), parameters);
 
 	}
 

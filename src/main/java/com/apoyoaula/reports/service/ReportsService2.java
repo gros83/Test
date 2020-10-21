@@ -24,7 +24,8 @@ public class ReportsService2 {
 			// Aqui agregar mas parametros que se necesten
 			inputParameters.putAll(new HashMap());
 			String ubicacionJasper = "/opt/apoyo/reportes/config/template/09LR02.jasper";
-			service.toPdf(new File(ubicacionJasper), out, inputParameters);
+			//service.toPdf(new File(ubicacionJasper), out, inputParameters);
+			service.toXls(new File(ubicacionJasper), out, inputParameters);
 			
 			String nombreDelpdf = "reporte.pdf";
 			alias = nombreDelpdf;

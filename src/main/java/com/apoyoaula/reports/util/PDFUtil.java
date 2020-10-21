@@ -23,4 +23,23 @@ public class PDFUtil {
 			e.printStackTrace();
 		}
 	}
+	
+	public void createXLSFile(byte[] pdfFile) {
+		FileOutputStream fos = null;
+		try {
+			fos = new FileOutputStream("/opt/apoyo/reportes/files/ejemplo.xls");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		try {
+			fos.write(pdfFile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			fos.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }

@@ -18,7 +18,8 @@ public class Test {
 			e.printStackTrace();
 		}
 		byte[] file = baos.toByteArray();
-    	new PDFUtil().createPDFFile(file);
+    	//new PDFUtil().createPDFFile(file);
+		new PDFUtil().createXLSFile(file);
 		System.out.println("Termina");
 	}
 }
