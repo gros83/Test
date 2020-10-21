@@ -24,7 +24,7 @@ public class ReportsEndPoint {
 				String idEscuela = request.params(":idEscuela");
 				System.out.println(idEscuela);
 				ReportsUserStory story =  new ReportsUserStory(properties);
-				Map<String,byte[]> reportes = story.generaReportesEscuela(idEscuela);
+				Map<String,String> reportes = story.generaReportesEscuela(idEscuela);
 				
 				return new Gson().toJson(reportes);
 			}catch(Exception e) {

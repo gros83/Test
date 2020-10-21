@@ -10,6 +10,26 @@ import com.apoyoaula.reports.impl.JasperImpl;
 import com.apoyoaula.reports.impl.JasperImpl2;
 
 public class ReportsService2 {
+	public void represent(String type, String pathToJasper, Map<String, Object> inputParameters, OutputStream out) throws Exception {
+		
+		if(!validate(out))
+			throw new Exception("Missing output file. Output file must be specified");
+		
+		JasperImpl2 service = new JasperImpl2();
+		
+		switch(type) {
+		  case "PDF":
+			  service.toPdf(new File(pathToJasper), out, inputParameters);
+		    break;
+		  case "XLS":
+			  service.toXls(new File(pathToJasper), out, inputParameters);
+		    break;
+		  default:
+		    throw new Exception("No se puede transformar a ese tipo");
+		}
+		
+	}
+
 	public String represent(Map<String, Object> inputParameters, OutputStream out) throws Exception {
 		
 		if(!validate(out))
