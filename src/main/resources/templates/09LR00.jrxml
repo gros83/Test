@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="09LR00" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="331f3fc5-3b97-4a04-9bc4-8106a8402a71">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="New Dataset 1" uuid="17b33ba5-df22-4955-990f-fdecf5dcefea">
+		<queryString language="SQL">
+			<![CDATA[select 'cal_au1' as campo,((cast((sum(cal_ua1)) as real)/1200)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r01=1 and grupo='A' group by asignatura,campo union
+select 'cal_ua2' as campo,((cast((sum(cal_ua2)) as real)/350)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r02=1 and grupo='A' group by asignatura,campo union
+select 'cal_ua3' as campo,((cast((sum(cal_ua3)) as real)/950)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r03=1 and grupo='A' group by asignatura,campo
+order by total desc                                                                                                                                         ]]>
+		</queryString>
+		<field name="campo" class="java.lang.String"/>
+		<field name="total" class="java.lang.Double"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select 'cal_au1' as campo,((cast((sum(cal_ua1)) as real)/1200)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r01=1 and grupo='A' group by asignatura,campo union
+select 'cal_ua2' as campo,((cast((sum(cal_ua2)) as real)/350)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r02=1 and grupo='A' group by asignatura,campo union
+select 'cal_ua3' as campo,((cast((sum(cal_ua3)) as real)/950)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r03=1 and grupo='A' group by asignatura,campo
+order by total desc]]>
+	</queryString>
+	<field name="campo" class="java.lang.String"/>
+	<field name="total" class="java.lang.Double"/>
+	<group name="09LR03_B"/>
+	<title>
+		<band height="51" splitType="Stretch"/>
+	</title>
+	<summary>
+		<band height="272">
+			<barChart>
+				<chart>
+					<reportElement x="43" y="42" width="200" height="100" uuid="505e97cd-3945-4ccd-ba8b-5f58d2f847c0"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["dos"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{campo}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{total}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

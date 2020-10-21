@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="gra_gpo" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a540963c-24ca-478d-a863-7f2cd57e4066">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1" uuid="fac593fe-a675-4027-be95-03a1df347c77">
+		<queryString language="SQL">
+			<![CDATA[select folio,cct,turno,grupo,num_aci,pct_aci from resul_alu where cct='09DPG12345' order by num_aci desc]]>
+		</queryString>
+		<field name="num_aci" class="java.lang.Integer"/>
+		<field name="pct_aci" class="java.lang.Float"/>
+		<field name="folio" class="java.lang.String"/>
+		<group name="folio">
+			<groupExpression><![CDATA[$F{folio}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="New Dataset 2" uuid="ffc586b3-f222-4659-a638-c46a8205a2f7">
+		<queryString language="SQL">
+			<![CDATA[select sum(r01),sum(r02), cct,turno,grupo from resul_alu where cct='09DPG12345' group by cct,turno,grupo,r01,r02]]>
+		</queryString>
+		<field name="sum" class="java.lang.Long"/>
+		<group name="sum">
+			<groupExpression><![CDATA[$F{sum}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="New Dataset 3" uuid="27ba0d2e-017a-4d07-916f-d4221eb5a94c">
+		<queryString language="SQL">
+			<![CDATA[select r01,sum(r01),r02,sum(r02)  from resul_alu where cct='09DPG12345' group by r01,r02 order by r01,r02]]>
+		</queryString>
+		<field name="r01" class="java.lang.Integer"/>
+		<field name="sum" class="java.lang.Long"/>
+		<field name="r02" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="New Dataset 4" uuid="33569878-4322-4aaa-98e5-a5b969bc736b">
+		<queryString language="SQL">
+			<![CDATA[select r01 as campo,sum(r01) from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r01=1 group by r01 union
+select r02 as campo,sum(r02) from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r02=1 group by r02 union
+select r03 as campo,sum(r03) from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r03=1 group by r03 union
+select r04 as campo,sum(r04) from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r04=1 group by r04
+order by campo]]>
+		</queryString>
+		<field name="campo" class="java.lang.Integer"/>
+		<field name="sum" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset 5" uuid="e22a805f-fd28-412b-b634-065ed71190f2">
+		<queryString language="SQL">
+			<![CDATA[select r01 as campo,sum(r01) from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r01=1 group by r01 union
+select r02 as campo,sum(r02) from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r02=1 group by r02 union
+select r03 as campo,sum(r03) from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r03=1 group by r03 union
+select r04 as campo,sum(r04) from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r04=1 group by r04
+order by campo]]>
+		</queryString>
+		<field name="campo" class="java.lang.Integer"/>
+		<field name="sum" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset 6" uuid="55a17ec0-29fc-4421-8aac-e02c844ed90a">
+		<queryString language="SQL">
+			<![CDATA[select 'r01' as campo,sum(r01) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r01=1 group by campo union
+select 'r02' as campo,sum(r02) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r02=1 group by campo union
+select 'r03' as campo,sum(r03) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r03=1 group by campo union
+select 'r04' as campo,sum(r04) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r04=1 group by campo
+order by total desc]]>
+		</queryString>
+		<field name="campo" class="java.lang.String"/>
+		<field name="total" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset 7" uuid="43963976-61dc-4753-953c-88b610149280">
+		<queryString language="SQL">
+			<![CDATA[select 'r01' as campo,sum(r01) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r01=1 group by campo union
+select 'r02' as campo,sum(r02) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r02=1 group by campo union
+select 'r03' as campo,sum(r03) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r03=1 group by campo union
+select 'r04' as campo,sum(r04) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r04=1 group by campo union
+select 'r05' as campo,sum(r05) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r05=1 group by campo union
+select 'r06' as campo,sum(r06) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r06=1 group by campo union
+select 'r07' as campo,sum(r07) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r07=1 group by campo union
+select 'r08' as campo,sum(r08) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r08=1 group by campo union
+select 'r09' as campo,sum(r09) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r09=1 group by campo union
+select 'r10' as campo,sum(r10) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r10=1 group by campo union
+select 'r11' as campo,sum(r11) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r11=1 group by campo union
+select 'r12' as campo,sum(r12) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r12=1 group by campo union
+select 'r13' as campo,sum(r13) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r13=1 group by campo union
+select 'r14' as campo,sum(r14) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r14=1 group by campo union
+select 'r15' as campo,sum(r15) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r15=1 group by campo union
+select 'r16' as campo,sum(r16) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r16=1 group by campo union
+select 'r17' as campo,sum(r17) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r17=1 group by campo union
+select 'r18' as campo,sum(r18) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r18=1 group by campo union
+select 'r19' as campo,sum(r19) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r19=1 group by campo union
+select 'r20' as campo,sum(r20) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r20=1 group by campo union
+select 'r21' as campo,sum(r21) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r21=1 group by campo union
+select 'r22' as campo,sum(r22) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r22=1 group by campo union
+select 'r23' as campo,sum(r23) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r23=1 group by campo union
+select 'r24' as campo,sum(r24) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r24=1 group by campo union
+select 'r25' as campo,sum(r25) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r25=1 group by campo
+order by total desc]]>
+		</queryString>
+		<field name="campo" class="java.lang.String"/>
+		<field name="total" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset 8" uuid="9eefbff8-d8df-42c9-a6ad-84454fa3bb61">
+		<queryString language="SQL">
+			<![CDATA[select r01 as campo,sum(r01) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r01=1 group by campo union
+select r02 as campo,sum(r02) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r02=1 group by campo union
+select r03 as campo,sum(r03) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r03=1 group by campo union
+select r04 as campo,sum(r04) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r04=1 group by campo union
+select r05 as campo,sum(r05) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r05=1 group by campo union
+select r06 as campo,sum(r06) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r06=1 group by campo union
+select r07 as campo,sum(r07) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r07=1 group by campo union
+select r08 as campo,sum(r08) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r08=1 group by campo union
+select r09 as campo,sum(r09) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r09=1 group by campo union
+select r10 as campo,sum(r10) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r10=1 group by campo union
+
+select r11 as campo,sum(r11) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r11=1 group by campo union
+select r12 as campo,sum(r12) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r12=1 group by campo union
+select r13 as campo,sum(r13) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r13=1 group by campo union
+select r14 as campo,sum(r14) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r14=1 group by campo union
+select r15 as campo,sum(r15) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r15=1 group by campo union
+select r16 as campo,sum(r16) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r16=1 group by campo union
+select r17 as campo,sum(r17) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r17=1 group by campo union
+select r18 as campo,sum(r18) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r18=1 group by campo union
+select r19 as campo,sum(r19) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r19=1 group by campo union
+select r20 as campo,sum(r20) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r20=1 group by campo union
+
+select r21 as campo,sum(r21) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r21=1 group by campo union
+select r22 as campo,sum(r22) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r22=1 group by campo union
+select r23 as campo,sum(r23) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r23=1 group by campo union
+select r24 as campo,sum(r24) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r24=1 group by campo union
+select r25 as campo,sum(r25) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r25=1 group by campo union
+select r26 as campo,sum(r26) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r26=1 group by campo union
+select r27 as campo,sum(r27) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r27=1 group by campo union
+select r28 as campo,sum(r28) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r28=1 group by campo union
+select r29 as campo,sum(r29) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r29=1 group by campo union
+select r30 as campo,sum(r30) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r30=1 group by campo union
+
+
+select r31 as campo,sum(r31) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r31=1 group by campo union
+select r32 as campo,sum(r32) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r32=1 group by campo union
+select r33 as campo,sum(r33) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r33=1 group by campo union
+select r34 as campo,sum(r34) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r34=1 group by campo union
+select r35 as campo,sum(r35) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r35=1 group by campo union
+select r36 as campo,sum(r36) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r36=1 group by campo union
+select r37 as campo,sum(r37) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r37=1 group by campo union
+select r38 as campo,sum(r38) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r38=1 group by campo union
+select r39 as campo,sum(r39) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r39=1 group by campo union
+select r40 as campo,sum(r40) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r40=1 group by campo
+
+order by total desc]]>
+		</queryString>
+		<field name="campo" class="java.lang.Integer"/>
+		<field name="total" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset 9" uuid="40464f11-0758-491b-bd95-8d89af523c83">
+		<queryString language="SQL">
+			<![CDATA[select r01 as campo,sum(r01) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r01=1 group by campo union
+select r02 as campo,sum(r02) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r02=1 group by campo union
+select r03 as campo,sum(r03) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r03=1 group by campo union
+select r04 as campo,sum(r04) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r04=1 group by campo union
+select r05 as campo,sum(r05) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r05=1 group by campo union
+select r06 as campo,sum(r06) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r06=1 group by campo union
+select r07 as campo,sum(r07) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r07=1 group by campo union
+select r08 as campo,sum(r08) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r08=1 group by campo union
+select r09 as campo,sum(r09) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r09=1 group by campo union
+select r10 as campo,sum(r10) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r10=1 group by campo union
+select r11 as campo,sum(r11) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r11=1 group by campo union
+select r12 as campo,sum(r12) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r12=1 group by campo union
+select r13 as campo,sum(r13) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r13=1 group by campo union
+select r14 as campo,sum(r14) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r14=1 group by campo union
+select r15 as campo,sum(r15) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r15=1 group by campo union
+select r16 as campo,sum(r16) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r16=1 group by campo union
+select r17 as campo,sum(r17) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r17=1 group by campo union
+select r18 as campo,sum(r18) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r18=1 group by campo union
+select r19 as campo,sum(r19) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r19=1 group by campo union
+select r20 as campo,sum(r20) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r20=1 group by campo union
+select r21 as campo,sum(r21) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r21=1 group by campo union
+select r22 as campo,sum(r22) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r22=1 group by campo union
+select r23 as campo,sum(r23) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r23=1 group by campo union
+select r24 as campo,sum(r24) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r24=1 group by campo union
+select r25 as campo,sum(r25) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r25=1 group by campo union
+select r26 as campo,sum(r26) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r26=1 group by campo union
+select r27 as campo,sum(r27) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r27=1 group by campo union
+select r28 as campo,sum(r28) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r28=1 group by campo union
+select r29 as campo,sum(r29) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r29=1 group by campo union
+select r30 as campo,sum(r30) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r30=1 group by campo union
+select r31 as campo,sum(r31) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r31=1 group by campo union
+select r32 as campo,sum(r32) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r32=1 group by campo union
+select r33 as campo,sum(r33) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r33=1 group by campo union
+select r34 as campo,sum(r34) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r34=1 group by campo union
+select r35 as campo,sum(r35) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r35=1 group by campo union
+select r36 as campo,sum(r36) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r36=1 group by campo union
+select r37 as campo,sum(r37) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r37=1 group by campo union
+select r38 as campo,sum(r38) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r38=1 group by campo union
+select r39 as campo,sum(r39) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r39=1 group by campo union
+select r40 as campo,sum(r40) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r40=1 group by campo
+
+order by total desc]]>
+		</queryString>
+		<field name="campo" class="java.lang.Integer"/>
+		<field name="total" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset 10" uuid="c2c82c96-315e-4cca-8228-749c2362375d">
+		<queryString language="SQL">
+			<![CDATA[select 'r01' as campo,sum(r01) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r01=1 group by campo union
+select 'r02' as campo,sum(r02) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r02=1 group by campo union
+select 'r03' as campo,sum(r03) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r03=1 group by campo union
+select 'r04' as campo,sum(r04) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r04=1 group by campo union
+select 'r05' as campo,sum(r05) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r05=1 group by campo union
+select 'r06' as campo,sum(r06) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r06=1 group by campo union
+select 'r07' as campo,sum(r07) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r07=1 group by campo union
+select 'r08' as campo,sum(r08) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r08=1 group by campo union
+select 'r09' as campo,sum(r09) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r09=1 group by campo union
+select 'r10' as campo,sum(r10) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r10=1 group by campo union
+select 'r11' as campo,sum(r11) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r11=1 group by campo union
+select 'r12' as campo,sum(r12) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r12=1 group by campo union
+select 'r13' as campo,sum(r13) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r13=1 group by campo union
+select 'r14' as campo,sum(r14) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r14=1 group by campo union
+select 'r15' as campo,sum(r15) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r15=1 group by campo union
+select 'r16' as campo,sum(r16) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r16=1 group by campo union
+select 'r17' as campo,sum(r17) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r17=1 group by campo union
+select 'r18' as campo,sum(r18) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r18=1 group by campo union
+select 'r19' as campo,sum(r19) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r19=1 group by campo union
+select 'r20' as campo,sum(r20) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r20=1 group by campo union
+select 'r21' as campo,sum(r21) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r21=1 group by campo union
+select 'r22' as campo,sum(r22) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r22=1 group by campo union
+select 'r23' as campo,sum(r23) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r23=1 group by campo union
+select 'r24' as campo,sum(r24) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r24=1 group by campo union
+select 'r25' as campo,sum(r25) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r25=1 group by campo union
+select 'r26' as campo,sum(r26) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r26=1 group by campo union
+select 'r27' as campo,sum(r27) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r27=1 group by campo union
+select 'r28' as campo,sum(r28) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r28=1 group by campo union
+select 'r29' as campo,sum(r29) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r29=1 group by campo union
+select 'r30' as campo,sum(r30) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r30=1 group by campo union
+select 'r31' as campo,sum(r31) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r31=1 group by campo union
+select 'r32' as campo,sum(r32) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r32=1 group by campo union
+select 'r33' as campo,sum(r33) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r33=1 group by campo union
+select 'r34' as campo,sum(r34) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r34=1 group by campo union
+select 'r35' as campo,sum(r35) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r35=1 group by campo union
+select 'r36' as campo,sum(r36) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r36=1 group by campo union
+select 'r37' as campo,sum(r37) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r37=1 group by campo union
+select 'r38' as campo,sum(r38) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r38=1 group by campo union
+select 'r39' as campo,sum(r39) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r39=1 group by campo union
+select 'r40' as campo,sum(r40) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r40=1 group by campo
+
+order by total desc]]>
+		</queryString>
+		<field name="campo" class="java.lang.String"/>
+		<field name="total" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset 11" uuid="d95dcfe8-5308-4e37-9cfd-3d732a5d8ad5">
+		<queryString language="SQL">
+			<![CDATA[select 'r01' as campo,sum(r01) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r01=1 group by campo union
+select 'r02' as campo,sum(r02) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r02=1 group by campo union
+select 'r03' as campo,sum(r03) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r03=1 group by campo union
+select 'r04' as campo,sum(r04) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r04=1 group by campo union
+select 'r05' as campo,sum(r05) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r05=1 group by campo union
+select 'r06' as campo,sum(r06) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r06=1 group by campo union
+select 'r07' as campo,sum(r07) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r07=1 group by campo union
+select 'r08' as campo,sum(r08) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r08=1 group by campo union
+select 'r09' as campo,sum(r09) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r09=1 group by campo union
+select 'r10' as campo,sum(r10) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r10=1 group by campo union
+select 'r11' as campo,sum(r11) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r11=1 group by campo union
+select 'r12' as campo,sum(r12) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r12=1 group by campo union
+select 'r13' as campo,sum(r13) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r13=1 group by campo union
+select 'r14' as campo,sum(r14) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r14=1 group by campo union
+select 'r15' as campo,sum(r15) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r15=1 group by campo union
+select 'r16' as campo,sum(r16) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r16=1 group by campo union
+select 'r17' as campo,sum(r17) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r17=1 group by campo union
+select 'r18' as campo,sum(r18) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r18=1 group by campo union
+select 'r19' as campo,sum(r19) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r19=1 group by campo union
+select 'r20' as campo,sum(r20) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r20=1 group by campo union
+select 'r21' as campo,sum(r21) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r21=1 group by campo union
+select 'r22' as campo,sum(r22) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r22=1 group by campo union
+select 'r23' as campo,sum(r23) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r23=1 group by campo union
+select 'r24' as campo,sum(r24) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r24=1 group by campo union
+select 'r25' as campo,sum(r25) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r25=1 group by campo union
+select 'r26' as campo,sum(r26) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r26=1 group by campo union
+select 'r27' as campo,sum(r27) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r27=1 group by campo union
+select 'r28' as campo,sum(r28) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r28=1 group by campo union
+select 'r29' as campo,sum(r29) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r29=1 group by campo union
+select 'r30' as campo,sum(r30) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r30=1 group by campo union
+select 'r31' as campo,sum(r31) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r31=1 group by campo union
+select 'r32' as campo,sum(r32) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r32=1 group by campo union
+select 'r33' as campo,sum(r33) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r33=1 group by campo union
+select 'r34' as campo,sum(r34) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r34=1 group by campo union
+select 'r35' as campo,sum(r35) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r35=1 group by campo union
+select 'r36' as campo,sum(r36) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r36=1 group by campo union
+select 'r37' as campo,sum(r37) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r37=1 group by campo union
+select 'r38' as campo,sum(r38) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r38=1 group by campo union
+select 'r39' as campo,sum(r39) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r39=1 group by campo union
+select 'r40' as campo,sum(r40) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r40=1 group by campo union
+select 'r41' as campo,sum(r41) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r41=1 group by campo union
+select 'r42' as campo,sum(r42) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r42=1 group by campo union
+select 'r43' as campo,sum(r43) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r43=1 group by campo union
+select 'r44' as campo,sum(r44) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r44=1 group by campo union
+select 'r45' as campo,sum(r45) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r45=1 group by campo union
+select 'r46' as campo,sum(r46) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r46=1 group by campo union
+select 'r47' as campo,sum(r47) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r47=1 group by campo union
+select 'r48' as campo,sum(r48) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r48=1 group by campo union
+select 'r49' as campo,sum(r49) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r49=1 group by campo union
+select 'r50' as campo,sum(r50) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r50=1 group by campo
+order by total desc]]>
+		</queryString>
+		<field name="campo" class="java.lang.String"/>
+		<field name="total" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset 12" uuid="a3d4dbf4-264a-4354-8f42-936a41c514bf">
+		<queryString language="SQL">
+			<![CDATA[select 'r01' as campo,sum(r01) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r01=1 group by campo union
+select 'r02' as campo,sum(r02) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r02=1 group by campo union
+select 'r03' as campo,sum(r03) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r03=1 group by campo union
+select 'r04' as campo,sum(r04) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r04=1 group by campo union
+select 'r05' as campo,sum(r05) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r05=1 group by campo union
+select 'r06' as campo,sum(r06) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r06=1 group by campo union
+select 'r07' as campo,sum(r07) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r07=1 group by campo union
+select 'r08' as campo,sum(r08) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r08=1 group by campo union
+select 'r09' as campo,sum(r09) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r09=1 group by campo union
+select 'r10' as campo,sum(r10) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r10=1 group by campo union
+select 'r11' as campo,sum(r11) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r11=1 group by campo union
+select 'r12' as campo,sum(r12) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r12=1 group by campo union
+select 'r13' as campo,sum(r13) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r13=1 group by campo union
+select 'r14' as campo,sum(r14) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r14=1 group by campo union
+select 'r15' as campo,sum(r15) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r15=1 group by campo union
+select 'r16' as campo,sum(r16) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r16=1 group by campo union
+select 'r17' as campo,sum(r17) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r17=1 group by campo union
+select 'r18' as campo,sum(r18) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r18=1 group by campo union
+select 'r19' as campo,sum(r19) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r19=1 group by campo union
+select 'r20' as campo,sum(r20) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r20=1 group by campo union
+select 'r21' as campo,sum(r21) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r21=1 group by campo union
+select 'r22' as campo,sum(r22) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r22=1 group by campo union
+select 'r23' as campo,sum(r23) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r23=1 group by campo union
+select 'r24' as campo,sum(r24) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r24=1 group by campo union
+select 'r25' as campo,sum(r25) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r25=1 group by campo union
+select 'r26' as campo,sum(r26) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r26=1 group by campo union
+select 'r27' as campo,sum(r27) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r27=1 group by campo union
+select 'r28' as campo,sum(r28) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r28=1 group by campo union
+select 'r29' as campo,sum(r29) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r29=1 group by campo union
+select 'r30' as campo,sum(r30) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r30=1 group by campo union
+select 'r31' as campo,sum(r31) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r31=1 group by campo union
+select 'r32' as campo,sum(r32) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r32=1 group by campo union
+select 'r33' as campo,sum(r33) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r33=1 group by campo union
+select 'r34' as campo,sum(r34) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r34=1 group by campo union
+select 'r35' as campo,sum(r35) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r35=1 group by campo union
+select 'r36' as campo,sum(r36) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r36=1 group by campo union
+select 'r37' as campo,sum(r37) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r37=1 group by campo union
+select 'r38' as campo,sum(r38) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r38=1 group by campo union
+select 'r39' as campo,sum(r39) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r39=1 group by campo union
+select 'r40' as campo,sum(r40) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r40=1 group by campo union
+select 'r41' as campo,sum(r41) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r41=1 group by campo union
+select 'r42' as campo,sum(r42) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r42=1 group by campo union
+select 'r43' as campo,sum(r43) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r43=1 group by campo union
+select 'r44' as campo,sum(r44) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r44=1 group by campo union
+select 'r45' as campo,sum(r45) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r45=1 group by campo union
+select 'r46' as campo,sum(r46) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r46=1 group by campo union
+select 'r47' as campo,sum(r47) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r47=1 group by campo union
+select 'r48' as campo,sum(r48) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r48=1 group by campo union
+select 'r49' as campo,sum(r49) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r49=1 group by campo union
+select 'r50' as campo,sum(r50) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r50=1 group by campo
+order by total desc]]>
+		</queryString>
+		<field name="campo" class="java.lang.String"/>
+		<field name="total" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="New Dataset 13" uuid="33d35ffa-ad00-49d2-a3ba-bf2af1505db6">
+		<queryString language="SQL">
+			<![CDATA[select 'r01' as campo,sum(r01) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r01=1 group by campo union
+select 'r02' as campo,sum(r02) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r02=1 group by campo union
+select 'r03' as campo,sum(r03) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r03=1 group by campo union
+select 'r04' as campo,sum(r04) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r04=1 group by campo union
+select 'r05' as campo,sum(r05) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r05=1 group by campo union
+select 'r06' as campo,sum(r06) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r06=1 group by campo union
+select 'r07' as campo,sum(r07) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r07=1 group by campo union
+select 'r08' as campo,sum(r08) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r08=1 group by campo union
+select 'r09' as campo,sum(r09) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r09=1 group by campo union
+select 'r10' as campo,sum(r10) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r10=1 group by campo union
+select 'r11' as campo,sum(r11) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r11=1 group by campo union
+select 'r12' as campo,sum(r12) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r12=1 group by campo union
+select 'r13' as campo,sum(r13) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r13=1 group by campo union
+select 'r14' as campo,sum(r14) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r14=1 group by campo union
+select 'r15' as campo,sum(r15) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r15=1 group by campo union
+select 'r16' as campo,sum(r16) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r16=1 group by campo union
+select 'r17' as campo,sum(r17) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r17=1 group by campo union
+select 'r18' as campo,sum(r18) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r18=1 group by campo union
+select 'r19' as campo,sum(r19) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r19=1 group by campo union
+select 'r20' as campo,sum(r20) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r20=1 group by campo union
+select 'r21' as campo,sum(r21) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r21=1 group by campo union
+select 'r22' as campo,sum(r22) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r22=1 group by campo union
+select 'r23' as campo,sum(r23) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r23=1 group by campo union
+select 'r24' as campo,sum(r24) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r24=1 group by campo union
+select 'r25' as campo,sum(r25) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r25=1 group by campo union
+select 'r26' as campo,sum(r26) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r26=1 group by campo union
+select 'r27' as campo,sum(r27) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r27=1 group by campo union
+select 'r28' as campo,sum(r28) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r28=1 group by campo union
+select 'r29' as campo,sum(r29) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r29=1 group by campo union
+select 'r30' as campo,sum(r30) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r30=1 group by campo union
+select 'r31' as campo,sum(r31) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r31=1 group by campo union
+select 'r32' as campo,sum(r32) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r32=1 group by campo union
+select 'r33' as campo,sum(r33) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r33=1 group by campo union
+select 'r34' as campo,sum(r34) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r34=1 group by campo union
+select 'r35' as campo,sum(r35) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r35=1 group by campo union
+select 'r36' as campo,sum(r36) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r36=1 group by campo union
+select 'r37' as campo,sum(r37) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r37=1 group by campo union
+select 'r38' as campo,sum(r38) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r38=1 group by campo union
+select 'r39' as campo,sum(r39) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r39=1 group by campo union
+select 'r40' as campo,sum(r40) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r40=1 group by campo union
+select 'r41' as campo,sum(r41) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r41=1 group by campo union
+select 'r42' as campo,sum(r42) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r42=1 group by campo union
+select 'r43' as campo,sum(r43) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r43=1 group by campo union
+select 'r44' as campo,sum(r44) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r44=1 group by campo union
+select 'r45' as campo,sum(r45) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r45=1 group by campo union
+select 'r46' as campo,sum(r46) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r46=1 group by campo union
+select 'r47' as campo,sum(r47) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r47=1 group by campo union
+select 'r48' as campo,sum(r48) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r48=1 group by campo union
+select 'r49' as campo,sum(r49) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r49=1 group by campo union
+select 'r50' as campo,sum(r50) as total from resul_alu where cct='09DPG12345' and turno='MATUTINO' and r50=1 group by campo
+order by total desc]]>
+		</queryString>
+		<field name="campo" class="java.lang.String"/>
+		<field name="total" class="java.lang.Long"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[select folio,cct,turno,grupo,num_aci,pct_aci from resul_alu where cct='09DPG12345' order by num_aci desc]]>
+	</queryString>
+	<field name="folio" class="java.lang.String"/>
+	<field name="cct" class="java.lang.String"/>
+	<field name="turno" class="java.lang.String"/>
+	<field name="grupo" class="java.lang.String"/>
+	<field name="num_aci" class="java.lang.Integer"/>
+	<field name="pct_aci" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="10" width="529" height="47" uuid="1a8badf5-0dde-4fbc-a500-6037b8cb09fa"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TABLAS DE PORCENTAJE DE ACIERTOS POR ALUMNO Y PORCENTAJE DE ACIERTOS POR REACTIVO
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="4" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="22" y="8" width="100" height="20" uuid="9cc3930d-2e7e-4475-8b4e-ee8ef34ddb9e"/>
+				<textFieldExpression><![CDATA[$F{cct}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="8" width="100" height="20" uuid="9c298506-48c7-458c-b4f5-b663d3e903bb"/>
+				<textFieldExpression><![CDATA[$F{turno}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="217" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table" style="table" x="11" y="0" width="270" height="140" uuid="4786315e-897a-4e71-9817-c219d1dae0a7"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset 1" uuid="af01fa2e-62c1-42ae-85a8-329219a9a3a3">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="c68b7bcf-5a01-4b45-bb21-34652d26196f">
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="a521fff3-c043-44df-b835-ef23d9ef6be0"/>
+								<text><![CDATA[folio]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="949a76b7-0728-4bcb-b638-ea9e750c8c15"/>
+								<textFieldExpression><![CDATA[$F{folio}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="989886d7-ee59-4877-9a63-4a3803652ed5">
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="475424b2-c2fc-4d9b-8b3d-3cabbb8e4a29"/>
+								<text><![CDATA[pct_aci]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="0f84ba7b-c765-48f5-95b4-5b237ccc0092"/>
+								<textFieldExpression><![CDATA[$F{pct_aci}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="bc7581ff-0178-41c7-bf8d-07ac500a165a">
+						<jr:tableFooter style="table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="267d67d6-a6bb-4c97-866d-029bf335c7e1"/>
+								<text><![CDATA[num_aci]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="101924da-ffdb-4bc9-8c84-82e2e0a8b9b4"/>
+								<textFieldExpression><![CDATA[$F{num_aci}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 11" style="table 11" x="349" y="0" width="180" height="140" uuid="107fa411-9e78-4811-8721-74bc9a315bf3"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset 13" uuid="c5049be7-36c2-4fac-9277-22e82b769459">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="342b4fc4-5c8b-479c-99ec-c91b647925f8">
+						<jr:columnHeader style="table 11_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="b8d7c0ab-8bec-48fb-bdcf-13a247606601"/>
+								<text><![CDATA[campo]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 11_CH" height="30"/>
+						<jr:detailCell style="table 11_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="216e05c2-b6c1-4994-a441-d68cb9dd538e"/>
+								<textFieldExpression><![CDATA[$F{campo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="e08b8e4e-1712-421d-8aac-9e6c146ebeaf">
+						<jr:columnHeader style="table 11_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="d343460e-eed3-4c7f-8093-1f60feeebaf0"/>
+								<text><![CDATA[total]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 11_CH" height="30"/>
+						<jr:detailCell style="table 11_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="e0fc77d7-548c-4320-807b-538fc34bcdbb"/>
+								<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="56" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="38" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="25" splitType="Stretch"/>
+	</summary>
+</jasperReport>

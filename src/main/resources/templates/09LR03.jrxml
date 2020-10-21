@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="09LR03" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4ee09a3c-602e-479f-a6a7-37d30c85d4e1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="New Dataset 1" uuid="718810a3-8103-4331-92ec-05d6e7598a99">
+		<queryString>
+			<![CDATA[select 'cal_ua1' as campo,((cast((sum(cal_ua1)) as real)/1200)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and grupo='A' group by asignatura,campo union
+select 'cal_ua2' as campo,((cast((sum(cal_ua2)) as real)/350)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and grupo='A' group by asignatura,campo union
+select 'cal_ua3' as campo,((cast((sum(cal_ua3)) as real)/950)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and grupo='A' group by asignatura,campo
+order by campo]]>
+		</queryString>
+		<field name="campo" class="java.lang.String"/>
+		<field name="total" class="java.lang.Double"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[select 'r01' as campo,((cast((sum(r01)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r01=1 and grupo='A' group by asignatura,campo union
+select 'r02' as campo,((cast((sum(r02)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r02=1 and grupo='A' group by asignatura,campo union
+select 'r03' as campo,((cast((sum(r03)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r03=1 and grupo='A' group by asignatura,campo union
+select 'r04' as campo,((cast((sum(r04)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r04=1 and grupo='A' group by asignatura,campo union
+select 'r05' as campo,((cast((sum(r05)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r05=1 and grupo='A' group by asignatura,campo union
+select 'r06' as campo,((cast((sum(r06)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r06=1 and grupo='A' group by asignatura,campo union
+select 'r07' as campo,((cast((sum(r07)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r07=1 and grupo='A' group by asignatura,campo union
+select 'r08' as campo,((cast((sum(r08)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r08=1 and grupo='A' group by asignatura,campo union
+select 'r09' as campo,((cast((sum(r09)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r09=1 and grupo='A' group by asignatura,campo union
+select 'r10' as campo,((cast((sum(r10)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r10=1 and grupo='A' group by asignatura,campo union
+select 'r11' as campo,((cast((sum(r11)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r11=1 and grupo='A' group by asignatura,campo union
+select 'r12' as campo,((cast((sum(r12)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r12=1 and grupo='A' group by asignatura,campo union
+select 'r13' as campo,((cast((sum(r13)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r13=1 and grupo='A' group by asignatura,campo union
+select 'r14' as campo,((cast((sum(r14)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r14=1 and grupo='A' group by asignatura,campo union
+select 'r15' as campo,((cast((sum(r15)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r15=1 and grupo='A' group by asignatura,campo union
+select 'r16' as campo,((cast((sum(r16)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r16=1 and grupo='A' group by asignatura,campo union
+select 'r17' as campo,((cast((sum(r17)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r17=1 and grupo='A' group by asignatura,campo union
+select 'r18' as campo,((cast((sum(r18)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r18=1 and grupo='A' group by asignatura,campo union
+select 'r19' as campo,((cast((sum(r19)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r19=1 and grupo='A' group by asignatura,campo union
+select 'r20' as campo,((cast((sum(r20)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r20=1 and grupo='A' group by asignatura,campo union
+select 'r21' as campo,((cast((sum(r21)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r21=1 and grupo='A' group by asignatura,campo union
+select 'r22' as campo,((cast((sum(r22)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r22=1 and grupo='A' group by asignatura,campo union
+select 'r23' as campo,((cast((sum(r23)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r23=1 and grupo='A' group by asignatura,campo union
+select 'r24' as campo,((cast((sum(r24)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r24=1 and grupo='A' group by asignatura,campo union
+select 'r25' as campo,((cast((sum(r25)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r25=1 and grupo='A' group by asignatura,campo union
+select 'r26' as campo,((cast((sum(r26)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r26=1 and grupo='A' group by asignatura,campo union
+select 'r27' as campo,((cast((sum(r27)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r27=1 and grupo='A' group by asignatura,campo union
+select 'r28' as campo,((cast((sum(r28)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r28=1 and grupo='A' group by asignatura,campo union
+select 'r29' as campo,((cast((sum(r29)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r29=1 and grupo='A' group by asignatura,campo union
+select 'r30' as campo,((cast((sum(r30)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r30=1 and grupo='A' group by asignatura,campo union
+select 'r31' as campo,((cast((sum(r31)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r31=1 and grupo='A' group by asignatura,campo union
+select 'r32' as campo,((cast((sum(r32)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r32=1 and grupo='A' group by asignatura,campo union
+select 'r33' as campo,((cast((sum(r33)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r33=1 and grupo='A' group by asignatura,campo union
+select 'r34' as campo,((cast((sum(r34)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r34=1 and grupo='A' group by asignatura,campo union
+select 'r35' as campo,((cast((sum(r35)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r35=1 and grupo='A' group by asignatura,campo union
+select 'r36' as campo,((cast((sum(r36)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r36=1 and grupo='A' group by asignatura,campo union
+select 'r37' as campo,((cast((sum(r37)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r37=1 and grupo='A' group by asignatura,campo union
+select 'r38' as campo,((cast((sum(r38)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r38=1 and grupo='A' group by asignatura,campo union
+select 'r39' as campo,((cast((sum(r39)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r39=1 and grupo='A' group by asignatura,campo union
+select 'r40' as campo,((cast((sum(r40)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r40=1 and grupo='A' group by asignatura,campo union
+select 'r41' as campo,((cast((sum(r41)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r41=1 and grupo='A' group by asignatura,campo union
+select 'r42' as campo,((cast((sum(r42)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r42=1 and grupo='A' group by asignatura,campo union
+select 'r43' as campo,((cast((sum(r43)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r43=1 and grupo='A' group by asignatura,campo union
+select 'r44' as campo,((cast((sum(r44)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r44=1 and grupo='A' group by asignatura,campo union
+select 'r45' as campo,((cast((sum(r45)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r45=1 and grupo='A' group by asignatura,campo union
+select 'r46' as campo,((cast((sum(r46)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r46=1 and grupo='A' group by asignatura,campo union
+select 'r47' as campo,((cast((sum(r47)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r47=1 and grupo='A' group by asignatura,campo union
+select 'r48' as campo,((cast((sum(r48)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r48=1 and grupo='A' group by asignatura,campo union
+select 'r49' as campo,((cast((sum(r49)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r49=1 and grupo='A' group by asignatura,campo union
+select 'r50' as campo,((cast((sum(r50)) as real)/50)*100) as total from resul_alu where asignatura='Lectura' and cct='09DPG12345' and turno='MATUTINO' and r50=1 and grupo='A' group by asignatura,campo
+order by total desc]]>
+	</queryString>
+	<field name="campo" class="java.lang.String"/>
+	<field name="total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="49" splitType="Stretch">
+			<image>
+				<reportElement x="568" y="2" width="167" height="46" uuid="e884a039-b6a1-4f47-8b91-172665ebb232"/>
+				<imageExpression><![CDATA["C:\\home office\\pro_evaluaciones diagnosticas\\Calificacion\\04_querys\\logos\\logo_05ago20.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="4" width="167" height="32" uuid="374c3ddb-2f56-4e2f-8914-f1ffe7216343"/>
+				<imageExpression><![CDATA["C:\\home office\\pro_evaluaciones diagnosticas\\Calificacion\\04_querys\\logos\\logo_sep.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="167" y="4" width="401" height="40" uuid="04e794bb-dd9e-41cf-9894-9395adbcbdde"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comisión Nacional para la Mejora Continua de la Educación
+Unidad Diagnóstica]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50">
+			<staticText>
+				<reportElement x="113" y="15" width="210" height="35" uuid="6bf90c23-cde0-4475-8363-87b05c01240b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Porcentaje de acietos por reactivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="521" y="15" width="210" height="35" uuid="b907b52d-e5de-46ee-8b2f-101c0c781732"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Porcentaje de aciertos por unidad de análisis]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="408" splitType="Stretch">
+			<barChart>
+				<chart isShowLegend="false">
+					<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="53" y="0" width="468" height="364" uuid="b420b98e-584e-44a0-9395-c3dc39ea66bc"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Reactivos"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{campo}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{total}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot isShowLabels="true" isShowTickLabels="true" isShowTickMarks="true">
+					<plot orientation="Horizontal"/>
+					<itemLabel color="#000000">
+						<font fontName="Arial" size="8"/>
+					</itemLabel>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#00CCFF" axisLineColor="#3366FF">
+							<labelFont>
+								<font fontName="Arial" size="7" isBold="true"/>
+							</labelFont>
+							<tickLabelFont>
+								<font fontName="Arial" size="7"/>
+							</tickLabelFont>
+						</axisFormat>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat verticalTickLabels="false">
+							<labelFont>
+								<font fontName="Arial" size="8"/>
+							</labelFont>
+							<tickLabelFont>
+								<font fontName="Arial" size="8"/>
+							</tickLabelFont>
+						</axisFormat>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+			<barChart>
+				<chart>
+					<reportElement stretchType="RelativeToBandHeight" x="521" y="0" width="231" height="100" uuid="a50e35f7-6e81-4e8d-9929-b39291a4f1cb"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="New Dataset 1" uuid="5c2282ee-7bde-4631-a84f-fa10e1ac012c"/>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Porcentaje de aciertos"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{campo}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{total}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot isShowLabels="true" isShowTickLabels="true" isShowTickMarks="false">
+					<plot orientation="Horizontal"/>
+					<itemLabel color="#000000">
+						<font fontName="Arial"/>
+					</itemLabel>
+					<categoryAxisFormat>
+						<axisFormat>
+							<labelFont>
+								<font fontName="Arial"/>
+							</labelFont>
+							<tickLabelFont>
+								<font fontName="Arial"/>
+							</tickLabelFont>
+						</axisFormat>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat>
+							<labelFont>
+								<font fontName="Arial"/>
+							</labelFont>
+						</axisFormat>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+			<staticText>
+				<reportElement x="4" y="17" width="44" height="367" uuid="60bf7a80-0fb0-42e8-a27c-f2db0052ddcb"/>
+				<textElement textAlignment="Center" rotation="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE GRÁFICAS DE PORCENTAJE DE ACIERTOS POR REACTIVO Y UNIDAD DE ANÁLISIS POR GRUPO
+]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="28" splitType="Stretch"/>
+	</summary>
+</jasperReport>

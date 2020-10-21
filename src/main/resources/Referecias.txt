@@ -1,0 +1,21 @@
+Links de refrerencia para la parte de Excel
+https://es.stackoverflow.com/questions/137788/generaci%C3%B3n-de-reportes-en-excel-desde-java
+https://medium.com/el-acordeon-del-programador/automatizar-reportes-a-excel-en-java-150eef0f1be9
+http://datojava.blogspot.com/2014/09/reporte-excel-con-java.html
+https://gist.github.com/HashRaygoza/e201a4d19e147245032b69f72fbcb6a9
+https://picodotdev.github.io/blog-bitix/2016/05/ejemplo-sencillo-de-como-crear-un-excel-o-csv-en-java-con-apache-poi-y-opencsv/
+
+Postgress
+https://codigoxules.org/conectar-postgresql-utilizando-driver-jdbc-java-postgresql-jdbc/
+https://es.stackoverflow.com/questions/7254/conexion-java-postgres-en-netbeans
+https://mkyong.com/jdbc/how-do-connect-to-postgresql-with-jdbc-driver-java/
+https://origendata.com/2017/06/22/conectar-java-con-una-base-de-datos-postgresql/
+
+https://www.baeldung.com/hikaricp
+https://devs4j.com/2018/09/10/aprende-a-crear-un-connection-pool-utilizando-hikari-cp-en-espanol/
+
+el password de superusuario de la pase de datos es 
+admin
+
+https://ayuda.guebs.com/usar-psql-conectar-base-datos-postgresql/
+https://www.neoguias.com/como-conectarse-postgresql-desde-linea-comandos/
