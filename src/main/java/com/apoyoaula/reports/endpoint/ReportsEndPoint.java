@@ -42,6 +42,27 @@ public class ReportsEndPoint {
 			System.out.println("Llegue...");
 			return "{\"success\":false}";
 		});
+		
+		post("/reportes/escuelas",(request, response) -> {
+				System.out.println(request.body());
+				return "{\"success\":false}";
+		});
+		
+		post("/reportes/grupos",(request, response) -> {
+			try {
+				String data = request.body();
+				System.out.println(data);
+				ReportsUserStory story =  new ReportsUserStory(properties);
+				Map<String,String> reportes = story.generaReportesGrupoJson(data);
+				
+				return new Gson().toJson(reportes);
+			}catch(Exception e) {
+				e.printStackTrace();
+				Map<String,Object> error = new HashMap<String,Object>();
+				error.put("error", e.getMessage());
+				return new Gson().toJson(error);
+			}
+	});
 	}
 	
 	static {

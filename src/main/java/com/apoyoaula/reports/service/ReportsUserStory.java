@@ -7,11 +7,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import com.apoyoaula.reports.model.GrupoInfo;
+import com.apoyoaula.reports.util.PDFUtil;
+import com.google.gson.Gson;
+
 public class ReportsUserStory {
 	private static Properties properties;
 	public ReportsUserStory(Properties properties){
 		this.properties = properties;
 	}
+	
 	public Map<String,String> generaReportesEscuela(String idEscuela) throws Exception {
 		if(idEscuela == null) {
 			throw new Exception("El identificador de la escuela no es valido");
@@ -25,14 +30,17 @@ public class ReportsUserStory {
 				
 		service.represent("PDF", getJasperPath("09LR02"), getParameters("09LR02"), baos);
 
-		response.put("09LR02.pdf", Base64.getEncoder().encodeToString(baos.toByteArray()));
-
+		byte[] file = baos.toByteArray();
+		new PDFUtil().createPDFFile(file);
+		response.put("09LR02.pdf", Base64.getEncoder().encodeToString(file));
 		
-		 baos = new ByteArrayOutputStream();
+		
+		baos = new ByteArrayOutputStream();
 			
 		service.represent("XLS", getJasperPath("09LR02"), getParameters("09LR02"), baos);
-
-		response.put("09LR02.xls", Base64.getEncoder().encodeToString(baos.toByteArray()));
+		file = baos.toByteArray();
+		new PDFUtil().createXLSFile(file);
+		response.put("09LR02.xls", Base64.getEncoder().encodeToString(file));
 		
 		
 		
@@ -40,6 +48,39 @@ public class ReportsUserStory {
 	}
 	
 	public Map<String,byte[]> generaReportesGrupo(String idGrupo){
+		return null;
+	}
+	
+	public Map<String,String> generaReportesEscuelaJson(String data) throws Exception {
+		
+		
+		Map<String,String> response = new HashMap<String,String>();
+		
+		ReportsService2 service = new ReportsService2();
+
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+				
+		service.represent("PDF", getJasperPath("09LR02"), getParameters("09LR02"), baos);
+
+		byte[] file = baos.toByteArray();
+		new PDFUtil().createPDFFile(file);
+		response.put("09LR02.pdf", Base64.getEncoder().encodeToString(file));
+		
+		
+		baos = new ByteArrayOutputStream();
+			
+		service.represent("XLS", getJasperPath("09LR02"), getParameters("09LR02"), baos);
+		file = baos.toByteArray();
+		new PDFUtil().createXLSFile(file);
+		response.put("09LR02.xls", Base64.getEncoder().encodeToString(file));
+		
+		
+		
+		return response;
+	}
+	
+	public Map<String,String> generaReportesGrupoJson(String data){
+		GrupoInfo grupoInfo = new Gson().fromJson(data, GrupoInfo.class);
 		return null;
 	}
 	
