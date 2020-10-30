@@ -7,12 +7,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-import com.apoyoaula.reports.model.GrupoInfo;
+import com.apoyoaula.reports.model.Parametros;
+import com.apoyoaula.reports.repository.dao.ParametrosDao;
+import com.apoyoaula.reports.repository.dao.ParametrosDaoImpl;
 import com.apoyoaula.reports.util.PDFUtil;
 import com.google.gson.Gson;
 
 public class ReportsUserStory {
 	private static Properties properties;
+	ParametrosDao parametros = new ParametrosDaoImpl();
 	public ReportsUserStory(Properties properties){
 		this.properties = properties;
 	}
@@ -21,6 +24,10 @@ public class ReportsUserStory {
 		if(idEscuela == null) {
 			throw new Exception("El identificador de la escuela no es valido");
 		}
+		
+		Parametros p = parametros.readByFolioDocente(idEscuela);
+		
+		
 		
 		Map<String,String> response = new HashMap<String,String>();
 		
@@ -80,7 +87,7 @@ public class ReportsUserStory {
 	}
 	
 	public Map<String,String> generaReportesGrupoJson(String data){
-		GrupoInfo grupoInfo = new Gson().fromJson(data, GrupoInfo.class);
+		Parametros grupoInfo = new Gson().fromJson(data, Parametros.class);
 		return null;
 	}
 	
@@ -121,5 +128,10 @@ public class ReportsUserStory {
 		    throw new Exception("No existe este reporte");
 		}
 		return response;
+	}
+	
+	private String obtenBaseNombreReportes(Parametros p) {
+		System.out.println(p.getIdNivel());
+		return null;
 	}
 }
