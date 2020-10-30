@@ -7,27 +7,46 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import com.apoyoaula.reports.model.Docente;
 import com.apoyoaula.reports.model.Parametros;
-import com.apoyoaula.reports.repository.dao.ParametrosDao;
-import com.apoyoaula.reports.repository.dao.ParametrosDaoImpl;
+import com.apoyoaula.reports.repository.dao.DocenteDao;
+import com.apoyoaula.reports.repository.dao.DocenteDaoImpl;
 import com.apoyoaula.reports.util.PDFUtil;
 import com.google.gson.Gson;
 
 public class ReportsUserStory {
 	private static Properties properties;
-	ParametrosDao parametros = new ParametrosDaoImpl();
+	
+	DocenteDao docente = new DocenteDaoImpl();
+	private static final String LITERATURA = "Literatura";
+	private static final String MATEMATICAS = "Matematicas";
+	
 	public ReportsUserStory(Properties properties){
 		this.properties = properties;
 	}
 	
 	public Map<String,String> generaReportesEscuela(String idEscuela) throws Exception {
 		if(idEscuela == null) {
-			throw new Exception("El identificador de la escuela no es valido");
+			throw new Exception("Folio invalido");
 		}
 		
-		Parametros p = parametros.readByFolioDocente(idEscuela);
+		boolean isEscuela = this.isEscuela(idEscuela);
+		System.out.println("isEscuela:"+ isEscuela);
 		
+		Docente d = null;
+		if(isEscuela) {
+			d = docente.readByFolioEscuela(idEscuela);
+		}else {
+			d = docente.readByFolioDocente(idEscuela);
+		}
 		
+		System.out.println(d.toString());
+		
+		String identificadorDeReportes = this.obtenNivelYGrupo(isEscuela, d);
+		System.out.println(identificadorDeReportes);
+		
+		Map<String,String> parametros = this.getParameters(d,LITERATURA);
+		System.out.println(parametros);
 		
 		Map<String,String> response = new HashMap<String,String>();
 		
@@ -133,5 +152,40 @@ public class ReportsUserStory {
 	private String obtenBaseNombreReportes(Parametros p) {
 		System.out.println(p.getIdNivel());
 		return null;
+	}
+	
+	private boolean isEscuela(String value) throws Exception {
+		int length = value.length();
+		if(length == 8 || length == 10){
+			if(length == 8) {
+				return true;
+			}else {
+				return false;
+			}
+		}else{
+			throw new Exception("Folio invalido");
+		}
+	}
+	
+	private String obtenNivelYGrupo(boolean isEscuela, Docente d){
+		String response = "";
+		if(isEscuela){
+			response = d.getIdNivel();
+		}else{
+			response = d.getIdNivel() + d.getGradoDoc();
+		}
+		return response;
+	}
+	
+	private Map<String,String>getParameters(Docente d, String asignatura){
+		Map<String,String> response = new HashMap<String,String>();
+		response.put("Pcct", d.getCct());
+		response.put("Pturno", d.getTurno());
+		response.put("Pcod_nivel", null); // No se que va aqui
+		response.put("Pgrupo", d.getGrupoDoc());
+		response.put("Pasignatura", asignatura); //No se que va
+		response.put("Pentidad", d.getEntidad());
+		response.put("Pentidad", d.getNomEsc());
+		return response;
 	}
 }
