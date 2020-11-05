@@ -18,7 +18,7 @@ public class ReportsUserStory {
 	private static Properties properties;
 	
 	DocenteDao docente = new DocenteDaoImpl();
-	private static final String LITERATURA = "Literatura";
+	private static final String LECTURA = "Lectura";
 	private static final String MATEMATICAS = "Matematicas";
 	
 	public ReportsUserStory(Properties properties){
@@ -45,7 +45,9 @@ public class ReportsUserStory {
 		String identificadorDeReportes = this.obtenNivelYGrupo(isEscuela, d);
 		System.out.println(identificadorDeReportes);
 		
-		Map<String,String> parametros = this.getParameters(d,LITERATURA);
+		Integer codNivel = this.getCodNivel(d);
+		
+		Map<String,Object> parametros = this.getParameters(d,LECTURA,codNivel);
 		System.out.println(parametros);
 		
 		Map<String,String> response = new HashMap<String,String>();
@@ -54,10 +56,18 @@ public class ReportsUserStory {
 
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 				
-		service.represent("PDF", getJasperPath("09LR02"), getParameters("09LR02"), baos);
+		service.represent("PDF", getJasperPath("08LR03"), parametros, baos);
 
 		byte[] file = baos.toByteArray();
-		new PDFUtil().createPDFFile(file);
+		new PDFUtil().createPDFFile(file,"08LR03.pdf");
+		response.put("08LR03.pdf", Base64.getEncoder().encodeToString(file));
+		
+		baos = new ByteArrayOutputStream();
+				
+		service.represent("PDF", getJasperPath("09LR02"), getParameters("09LR02"), baos);
+
+		file = baos.toByteArray();
+		new PDFUtil().createPDFFile(file,"09LR02.pdf");
 		response.put("09LR02.pdf", Base64.getEncoder().encodeToString(file));
 		
 		
@@ -65,10 +75,8 @@ public class ReportsUserStory {
 			
 		service.represent("XLS", getJasperPath("09LR02"), getParameters("09LR02"), baos);
 		file = baos.toByteArray();
-		new PDFUtil().createXLSFile(file);
+		new PDFUtil().createXLSFile(file,"09LR02.xls");
 		response.put("09LR02.xls", Base64.getEncoder().encodeToString(file));
-		
-		
 		
 		return response;
 	}
@@ -89,7 +97,7 @@ public class ReportsUserStory {
 		service.represent("PDF", getJasperPath("09LR02"), getParameters("09LR02"), baos);
 
 		byte[] file = baos.toByteArray();
-		new PDFUtil().createPDFFile(file);
+		new PDFUtil().createPDFFile(file, "09LR02.pdf");
 		response.put("09LR02.pdf", Base64.getEncoder().encodeToString(file));
 		
 		
@@ -97,7 +105,7 @@ public class ReportsUserStory {
 			
 		service.represent("XLS", getJasperPath("09LR02"), getParameters("09LR02"), baos);
 		file = baos.toByteArray();
-		new PDFUtil().createXLSFile(file);
+		new PDFUtil().createXLSFile(file, "09LR02.xls");
 		response.put("09LR02.xls", Base64.getEncoder().encodeToString(file));
 		
 		
@@ -125,6 +133,10 @@ public class ReportsUserStory {
 			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
   						.append(File.separator).append("reportes/config/template/09LR03.jasper").toString();
 		    break;
+		  case "08LR03":
+			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
+  						.append(File.separator).append("reportes/config/template/08LR03.jasper").toString();
+		    break;
 		  default:
 		    throw new Exception("No existe este reporte");
 		}
@@ -141,6 +153,9 @@ public class ReportsUserStory {
 			    response = new HashMap();
 		    break;
 		  case "09LR03":
+			    response = new HashMap();
+		    break;
+		  case "08LR03":
 			    response = new HashMap();
 		    break;
 		  default:
@@ -177,15 +192,56 @@ public class ReportsUserStory {
 		return response;
 	}
 	
-	private Map<String,String>getParameters(Docente d, String asignatura){
-		Map<String,String> response = new HashMap<String,String>();
+	private Map<String,Object>getParameters(Docente d, String asignatura, Integer cod_nivel){
+		Map<String,Object> response = new HashMap<String,Object>();
 		response.put("Pcct", d.getCct());
-		response.put("Pturno", d.getTurno());
-		response.put("Pcod_nivel", null); // No se que va aqui
+		response.put("Pturno", d.getTurno().toUpperCase());
+		response.put("Pcod_nivel", cod_nivel); // No se que va aqui
 		response.put("Pgrupo", d.getGrupoDoc());
 		response.put("Pasignatura", asignatura); //No se que va
 		response.put("Pentidad", d.getEntidad());
 		response.put("Pentidad", d.getNomEsc());
 		return response;
+	}
+	
+	private Integer getCodNivel(Docente d) throws Exception {
+		String identificador = d.getIdNivel().toUpperCase() + d.getGradoDoc();
+		Integer response = 0;
+		switch (identificador) {
+		case "P1":
+			response = 1;
+			break;
+		case "P2":
+			response = 2;
+			break;
+		case "P3":
+			response = 3;
+			break;
+		case "P4":
+			response = 4;
+			break;
+		case "P5":
+			response = 5;
+			break;
+		case "P6":
+			response = 6;
+			break;
+		case "S1":
+			response = 7;
+			break;
+		case "S2":
+			response = 8;
+			break;
+		case "S3":
+			response = 9;
+			break;
+		default:
+			throw new Exception("No fué posible calcular el codigo de nivel con los datos proporcionados");
+		}
+		return response;
+	}
+	
+	private String getNameReports() {
+		return null;
 	}
 }

@@ -5,10 +5,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class PDFUtil {
-	public void createPDFFile(byte[] pdfFile) {
+	public void createPDFFile(byte[] pdfFile, String name) {
 		FileOutputStream fos = null;
 		try {
-			fos = new FileOutputStream("/opt/apoyo/reportes/files/ejemplo.pdf");
+			fos = new FileOutputStream("/opt/apoyoaula/reportes/files/"+ name);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -24,10 +24,10 @@ public class PDFUtil {
 		}
 	}
 	
-	public void createXLSFile(byte[] pdfFile) {
+	public void createXLSFile(byte[] pdfFile, String name) {
 		FileOutputStream fos = null;
 		try {
-			fos = new FileOutputStream("/opt/apoyo/reportes/files/ejemplo.xls");
+			fos = new FileOutputStream("/opt/apoyoaula/reportes/files/"+ name);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

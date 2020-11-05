@@ -19,7 +19,7 @@ public class Test {
 		}
 		byte[] file = baos.toByteArray();
     	//new PDFUtil().createPDFFile(file);
-		new PDFUtil().createXLSFile(file);
+		new PDFUtil().createXLSFile(file, "ejemplo.xls");
 		System.out.println("Termina");
 	}
 }
