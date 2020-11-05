@@ -19,7 +19,7 @@ public class ReportsUserStory {
 	
 	DocenteDao docente = new DocenteDaoImpl();
 	private static final String LECTURA = "Lectura";
-	private static final String MATEMATICAS = "Matematicas";
+	private static final String MATEMATICAS = "Matemáticas";
 	
 	public ReportsUserStory(Properties properties){
 		this.properties = properties;
@@ -62,6 +62,75 @@ public class ReportsUserStory {
 		new PDFUtil().createPDFFile(file,"08LR03.pdf");
 		response.put("08LR03.pdf", Base64.getEncoder().encodeToString(file));
 		
+		
+		baos = new ByteArrayOutputStream();
+		
+		service.represent("PDF", getJasperPath("08LR01"), parametros, baos);
+
+		file = baos.toByteArray();
+		new PDFUtil().createXLSFile(file,"08LR01.pdf");
+		response.put("08LR01.pdf", Base64.getEncoder().encodeToString(file));
+		
+		
+		
+		baos = new ByteArrayOutputStream();
+		
+		service.represent("PDF", getJasperPath("08LR02"), parametros, baos);
+
+		file = baos.toByteArray();
+		new PDFUtil().createPDFFile(file,"08LR02.pdf");
+		response.put("08LR02.pdf", Base64.getEncoder().encodeToString(file));
+		
+		baos = new ByteArrayOutputStream();
+		
+		service.represent("PDF", getJasperPath("08LR04"), parametros, baos);
+
+		file = baos.toByteArray();
+		new PDFUtil().createXLSFile(file,"08LR04.pdf");
+		response.put("08LR04.pdf", Base64.getEncoder().encodeToString(file));
+		
+		
+		Map<String,Object> parametrosMat = this.getParameters(d,MATEMATICAS,codNivel);
+		System.out.println(parametrosMat);
+		
+		
+		
+		baos = new ByteArrayOutputStream();
+		
+		service.represent("PDF", getJasperPath("08MR01"), parametrosMat, baos);
+
+		file = baos.toByteArray();
+		new PDFUtil().createXLSFile(file,"08MR01.pdf");
+		response.put("08MR01.pdf", Base64.getEncoder().encodeToString(file));
+		
+		
+		
+		baos = new ByteArrayOutputStream();
+		
+		service.represent("PDF", getJasperPath("08MR02"), parametrosMat, baos);
+
+		file = baos.toByteArray();
+		new PDFUtil().createPDFFile(file,"08MR02.pdf");
+		response.put("08MR02.pdf", Base64.getEncoder().encodeToString(file));
+		
+		
+		baos = new ByteArrayOutputStream();
+		
+		service.represent("PDF", getJasperPath("08MR03"), parametrosMat, baos);
+
+		file = baos.toByteArray();
+		new PDFUtil().createPDFFile(file,"08MR03.pdf");
+		response.put("08MR03.pdf", Base64.getEncoder().encodeToString(file));
+		
+		baos = new ByteArrayOutputStream();
+		
+		service.represent("PDF", getJasperPath("08MR04"), parametrosMat, baos);
+
+		file = baos.toByteArray();
+		new PDFUtil().createXLSFile(file,"08MR04.pdf");
+		response.put("08MR04.pdf", Base64.getEncoder().encodeToString(file));
+		
+		/*
 		baos = new ByteArrayOutputStream();
 				
 		service.represent("PDF", getJasperPath("09LR02"), getParameters("09LR02"), baos);
@@ -77,6 +146,7 @@ public class ReportsUserStory {
 		file = baos.toByteArray();
 		new PDFUtil().createXLSFile(file,"09LR02.xls");
 		response.put("09LR02.xls", Base64.getEncoder().encodeToString(file));
+		*/
 		
 		return response;
 	}
@@ -133,9 +203,37 @@ public class ReportsUserStory {
 			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
   						.append(File.separator).append("reportes/config/template/09LR03.jasper").toString();
 		    break;
+		  case "08LR01":
+			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
+  						.append(File.separator).append("reportes/config/template/08LR01/08LR01.jasper").toString();
+		    break;
+		  case "08LR02":
+			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
+  						.append(File.separator).append("reportes/config/template/08LR02/08LR02.jasper").toString();
+		    break;
 		  case "08LR03":
 			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
-  						.append(File.separator).append("reportes/config/template/08LR03.jasper").toString();
+  						.append(File.separator).append("reportes/config/template/08LR03/08LR03.jasper").toString();
+		    break;
+		  case "08LR04":
+			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
+  						.append(File.separator).append("reportes/config/template/Reporte_4_Docente/reporte_argumentos.jasper").toString();
+		    break;
+		  case "08MR01":
+			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
+  						.append(File.separator).append("reportes/config/template/08MR01/08MR01.jasper").toString();
+		    break;
+		  case "08MR02":
+			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
+  						.append(File.separator).append("reportes/config/template/08MR02/08MR02.jasper").toString();
+		    break;
+		  case "08MR03":
+			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
+  						.append(File.separator).append("reportes/config/template/08MR03/08MR03.jasper").toString();
+		    break;
+		  case "08MR04":
+			  response = new StringBuilder(properties.getProperty("reports.templates.directory"))
+  						.append(File.separator).append("reportes/config/template/Reporte_4_Docente/reporte_argumentos.jasper").toString();
 		    break;
 		  default:
 		    throw new Exception("No existe este reporte");
@@ -200,7 +298,7 @@ public class ReportsUserStory {
 		response.put("Pgrupo", d.getGrupoDoc());
 		response.put("Pasignatura", asignatura); //No se que va
 		response.put("Pentidad", d.getEntidad());
-		response.put("Pentidad", d.getNomEsc());
+		response.put("Pnom_esc", d.getNomEsc());
 		return response;
 	}
 	
